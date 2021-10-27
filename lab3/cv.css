@@ -12,6 +12,10 @@ footer {
 	width: 70%;
 }
 
+@media screen and (max-width: 1000px) {
+	.contentbox { width: 100%; }
+}
+
 #hd {
 	border-bottom: 1px solid #ccc;
 	text-align:center;
@@ -44,45 +48,28 @@ footer {
 		'photo phoneD phoneC'
 		'photo emailD emailC'
 		'photo telegramD telegramC'
-		'jobD  job1posD job1posC'
-		'jobD  job1compD job1compC'
-		'jobD  job1beginD job1beginC'
 		/ min-content min-content auto
 		;
 	border-bottom: 1px solid #ccc;
 }
+@media screen and (max-width: 600px) {
+	.top-container {
+	grid-template: 
+		'photo photo'
+		'nameD nameC' 25px 
+		'birthD birthC'
+		'gitD gitC'
+		'phoneD phoneC'
+		'emailD emailC'
+		'telegramD telegramC'
+		/ min-content auto
+		;
+	}
+}
+
 .top-container > div{
 	font-weight: bold;
 }
-
-.sectionpart {
-	font-weight: normal;
-	width: 100%;
-    float: left;
-	margin-bottom: 2em;
-	padding-bottom: 2em;
-	border-bottom: 1px solid #ccc;
-}
-
-.first {
-	text-align:  right;
-	font-size: 252%;
-	font-style: italic;
-	color: #333;
-	width: 45.5%;
-	margin: 0;
-	float: left;
-	padding: 0;
-}
-.content {
-	text-align:  left;
-	float: right;
-	width: 47.2%;
-	margin: 0;
-	padding: 0;
-	font-size: 152%;
-}
-
 
 .skill-container {
 	display: flex;
@@ -107,6 +94,7 @@ footer {
 	font-style: italic;
 	align-self: center;
 	margin: 3px 30px;
+    text-align: center;
 	border-bottom: 1px solid #ccc;
 }
 .item-wexp1posD      { grid-area: wexp1posD; }
@@ -122,16 +110,17 @@ footer {
 	font-style: italic;
 	align-self: center;
 	margin: 3px 30px;
+    text-align: center;
 	border-bottom: 1px solid #ccc;
 }
-.item-uexp1posD      { grid-area: uexp1posD; }
-.item-uexp1posC      { grid-area: uexp1posC; }
-.item-uexp1dirD      { grid-area: uexp1dirD; }
-.item-uexp1dirC      { grid-area: uexp1dirC; }
-.item-uexp1uniC      { grid-area: uexp1uniC; }
-.item-uexp1uniD      { grid-area: uexp1uniD; }
-.item-uexp1dateC     { grid-area: uexp1dateC; }
-.item-uexp1dateD     { grid-area: uexp1dateD; }
+.item-uexp1posD      { grid-area: uexp1posD;  align-self: center;}
+.item-uexp1posC      { grid-area: uexp1posC;  align-self: center;}
+.item-uexp1dirD      { grid-area: uexp1dirD;  align-self: center;}
+.item-uexp1dirC      { grid-area: uexp1dirC;  align-self: center;}
+.item-uexp1uniD      { grid-area: uexp1uniD;  align-self: center;}
+.item-uexp1uniC      { grid-area: uexp1uniC;  align-self: center;}
+.item-uexp1dateD     { grid-area: uexp1dateD; align-self: end; }
+.item-uexp1dateC     { grid-area: uexp1dateC; align-self: end; }
 
 .item-techD         { 
 	grid-area: techD;
@@ -139,28 +128,76 @@ footer {
 	font-style: italic;
 	align-self: center;
 	margin: 3px 30px;
+    text-align: center;
 	border-bottom: 1px solid #ccc;
 }
 
+.item-techC      { grid-area: techC; align-self: center; }
+
+.item-infoD         { 
+	grid-area: infoD;
+	font-size: 200%;
+	font-style: italic;
+	align-self: center;
+	margin: 3px 30px;
+    text-align: center;
+	border-bottom: 1px solid #ccc;
+}
+.item-infoC      { grid-area: infoC; }
+
+.item-line       { grid-area: line; border-bottom: 1px solid #ccc; }
+.item-line1       { grid-area: line1; border-bottom: 1px solid #ccc; }
+.item-line2       { grid-area: line2; border-bottom: 1px solid #ccc; }
+.item-line3       { grid-area: line3; border-bottom: 1px solid #ccc; }
 
 .info-container {
 	display: grid;
 	align-content: start;
 	justify-content: center;
 	grid-template: 
-		             'wexpD wexp1posD  wexp1posC'  25px          
-		             'wexpD wexp1compD wexp1compC' 25px          
-		             'wexpD wexp1dateD wexp1dateC'
-		             'uexpD uexp1posD  uexp1posC'  25px          
-		             'uexpD uexp1dirD  uexp1dirC'  25px          
-		             'uexpD uexp1uniD  uexp1uniC'  25px          
+		             'wexpD wexp1posD  wexp1posC'            
+		             'wexpD wexp1compD wexp1compC'           
+		             'wexpD wexp1dateD wexp1dateC' 
+					 'line line line'
+		             'uexpD uexp1posD uexp1posC'            
+		             'uexpD uexp1dirD uexp1dirC'            
+		             'uexpD uexp1uniD uexp1uniC'            
 		             'uexpD uexp1dateD uexp1dateC'
-		             'techD tech'  25px          
-		/ auto auto auto
+					 'line1 line1 line1'
+		             'techD techC techC' 
+					 'line2 line2 line2'
+					 'infoD infoC infoC' 
+					 'line3 line3 line3'
+		/ min-content auto auto
 		;
 	;
 	text-align: left;
 	font-size:  152%;
 	gap: 10px 20px;
-};
+}
 
+@media screen and (max-width: 600px) {
+	.info-container {
+	grid-template: 
+					 'wexpD wexpD'
+		             'wexp1posD  wexp1posC'            
+		             'wexp1compD wexp1compC'           
+		             'wexp1dateD wexp1dateC' 
+					 'line line'
+					 'uexpD uexpD'
+		             'uexp1posD uexp1posC'            
+		             'uexp1dirD uexp1dirC'            
+		             'uexp1uniD uexp1uniC'            
+		             'uexp1dateD uexp1dateC'
+					 'line1 line1'
+					 'techD techD'
+		             'techC techC' 
+					 'line2 line2'
+					 'infoD infoD'
+					 'infoC infoC' 
+					 'line3 line3'
+		/ auto auto
+		;
+	;
+	}
+}
