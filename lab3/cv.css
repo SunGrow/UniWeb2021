@@ -97,12 +97,12 @@ footer {
     text-align: center;
 	border-bottom: 1px solid #ccc;
 }
-.item-wexp1posD      { grid-area: wexp1posD; }
-.item-wexp1posC      { grid-area: wexp1posC; }
-.item-wexp1compC     { grid-area: wexp1compC; }
-.item-wexp1compD     { grid-area: wexp1compD; }
-.item-wexp1dateC     { grid-area: wexp1dateC; }
-.item-wexp1dateD     { grid-area: wexp1dateD; }
+.item-wexp1posD      { grid-area: wexp1posD;  align-self: center;}
+.item-wexp1posC      { grid-area: wexp1posC;  align-self: center;}
+.item-wexp1compC     { grid-area: wexp1compC; align-self: center;}
+.item-wexp1compD     { grid-area: wexp1compD; align-self: center;}
+.item-wexp1dateC     { grid-area: wexp1dateC; align-self: center;}
+.item-wexp1dateD     { grid-area: wexp1dateD; align-self: center;}
 
 .item-uexpD         { 
 	grid-area: uexpD;
@@ -176,7 +176,7 @@ footer {
 	gap: 10px 20px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
 	.info-container {
 	grid-template: 
 					 'wexpD wexpD'
